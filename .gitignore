@@ -1,0 +1,40 @@
+# ==========================================
+# Visual Studio & .NET API
+# ==========================================
+# User-specific and temporary files
+.vs/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results and compiled artifacts
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Ll]og/
+[Ll]ogs/
+*.pdb
+*.cache
+
+# Publish Output
+publish/
+*.pubxml
+*.publishproj
+
+# Testing and Coverage
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Trashes
+Thumbs.db

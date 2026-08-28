@@ -1,0 +1,6 @@
+@csce360ChrisExampleAPI_HostAddress = http://localhost:5016
+
+GET {{csce360ChrisExampleAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
