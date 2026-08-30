@@ -1,3 +1,6 @@
 <Solution>
   <Project Path="csce360ChrisExampleAPI/csce360ChrisExampleAPI.csproj" />
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
 </Solution>

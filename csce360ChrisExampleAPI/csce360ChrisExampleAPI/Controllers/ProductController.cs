@@ -1,3 +1,5 @@
+using csce360ChrisExampleAPI.Manager.Interface;
+using csce360ChrisExampleAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace csce360ChrisExampleAPI.Controllers
@@ -6,12 +8,18 @@ namespace csce360ChrisExampleAPI.Controllers
     [Route("[controller]")]
     public class ProductController : ControllerBase
     {
-      
-        [HttpGet(Name = "GetAllResults")]
-        public IEnumerable<Result> GetAllResults()
+        private readonly IProductManager _productManager;
+
+        public ProductController(IProductManager productManager)
         {
-            return null;
-            
+            _productManager = productManager;
+        }
+
+        [HttpGet(Name = "GetAllResults")]
+        public async Task<ActionResult<IEnumerable<Result>>> GetAllResults()
+        {
+            var results = await _productManager.GetAllResultsAsync();
+            return Ok(results);
         }
     }
 }

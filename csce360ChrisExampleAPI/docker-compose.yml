@@ -1,0 +1,9 @@
+services:
+  csce360chrisexampleapi:
+    image: ${DOCKER_REGISTRY-}csce360chrisexampleapi
+    build:
+      context: .
+      dockerfile: csce360ChrisExampleAPI/Dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081"
