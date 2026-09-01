@@ -48,7 +48,7 @@ namespace csce360ChrisExampleAPI.Manager
                     ProductName = info.ProductName,
                     Price = info.Price,
                     Category = info.Category,
-                    OnSale = info.OnSale
+                    OnSale = info.On_Sale
                 });
             }
 
