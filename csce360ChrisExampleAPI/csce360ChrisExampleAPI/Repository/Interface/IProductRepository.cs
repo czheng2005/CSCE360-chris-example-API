@@ -5,5 +5,9 @@ namespace csce360ChrisExampleAPI.Repository.Interface
     public interface IProductRepository
     {
         Task<IEnumerable<ProductWithSupplier>> GetAllProductsWithSuppliersAsync();
+
+        Task<IEnumerable<Category>> GetAllCategoriesAsync();
+
+        Task<IEnumerable<Supplier>> GetAllSuppliersAsync();
     }
 }

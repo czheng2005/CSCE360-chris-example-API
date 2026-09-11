@@ -1,14 +1,20 @@
+using System.Text.Json.Serialization;
+
 namespace csce360ChrisExampleAPI.Models
 {
-    // Maps the JSON stored in the Products.Info column.
-    // If your actual JSON keys use different casing (e.g. camelCase),
-    // this still works because deserialization is case-insensitive
-    // (see ProductManager). If the key NAMES differ (e.g. "name" instead
-    // of "ProductName"), update the property names below to match.
+    // Maps the JSON stored in the Products.Info column, e.g.:
+    // {"name": "Fuji Apples", "price": 4, "category": "grocery", "on_sale": false}
+    //
+    // Deserialization is case-insensitive (see ProductManager), which covers
+    // Price/price, Category/category, and On_Sale/on_sale. The JSON key "name"
+    // does NOT match "ProductName" by casing alone, so it needs an explicit
+    // JsonPropertyName mapping.
     public class ProductInfo
     {
+        [JsonPropertyName("name")]
         public string ProductName { get; set; } = string.Empty;
-        public int Price { get; set; }
+
+        public decimal Price { get; set; }
         public string Category { get; set; } = string.Empty;
         public bool On_Sale { get; set; }
     }
